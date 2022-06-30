@@ -1,0 +1,188 @@
+.btn-teal2 {
+  background-color: #1c817b;
+  color: #fff;
+}
+.btn-musgo2 {
+  background-color: #7da73b;
+  color: #fff;
+}
+
+.pagination .page-item.page-link a {
+  color: #3c3c3c;
+}
+.pagination .page-item.active.page-link {
+  background-color: #fff;
+  border-color: #c9c7c9;
+  box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
+  color: #3c3c3c;
+}
+.pagination .page-link {
+  padding: 0.4rem 0.75rem;
+}
+
+[data-component="resultado-pesquisa-listagem"] .card .btn {
+  background-color: #202d2a;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 12px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+[data-component="courses"],
+[data-component="tvs"],
+[data-component="card-cursos-pesquisa"] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.ads .card {
+  padding: 25px 15px;
+  width: 92%;
+  max-width: 92%;
+  flex: 1 1 92%;
+}
+
+.btn-unsubscribe {
+  color: #fff;
+  bottom: 0;
+  position: relative;
+  margin-top: 17px;
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .cursos-ead .item strong {
+    font-size: 48px !important;
+  }
+  .cursos-ead .item {
+    margin-left: -65px;
+  }
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .list-course-detail {
+  margin-top: -10px;
+  width: 100%;
+  padding: 0px;
+  height: auto;
+  justify-content: center;
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .list-course-detail
+  img {
+  width: 24px;
+  margin-right: 5px;
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .list-course-detail
+  .row {
+  width: 90%;
+}
+
+body [data-layout="default"] [data-layout="default-content"] .curso__item h3 {
+  margin-bottom: 0px;
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .d-flex {
+  width: 46%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .card
+  .card-body {
+  padding-bottom: 0px;
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .list-course-detail
+  p {
+  line-height: normal;
+  margin: 0 10px 0 0px;
+}
+
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .list-course-detail
+  small {
+  width: 100%;
+  display: block;
+  color: #000;
+  font-size: 11px;
+  line-height: normal;
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  margin-bottom: -3px;
+}
+body
+  [data-layout="default"]
+  [data-layout="default-content"]
+  .curso__item
+  .list-course-detail
+  strong {
+  font-size: 12px;
+}
+
+[data-component="sidebar-curso"] .aside-list li,
+[data-component="sidebar-default"] .aside-list li {
+  height: auto !important;
+}
+
+[data-component="sidebar-curso"] .aside-list li p,
+[data-component="sidebar-default"] .aside-list li p {
+  padding-right: 5px;
+}
+
+.matriculas-abertas {
+  color: white;
+  background-color: #de0b47;
+  text-align: center;
+  height: 30px;
+  margin-top: -30px;
+  padding-top: 2.5px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 600px) {
+  [data-header="curso"] .header-content,
+  [data-header="interna"] .header-content {
+    padding-bottom: 90px;
+  }
+}
+
+.matriculas-abertas-interna {
+  text-align: center;
+  height: 60px;
+  background-color: #de0b47;
+  color: white;
+  padding-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+}

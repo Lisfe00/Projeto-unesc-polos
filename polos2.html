@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta htequiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/88bc17d677.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Polos</title>
+    <style type="text/css">
+
+      .footer {
+        padding: 20px;
+        background-color: white;
+      }
+
+      /* alterado */
+      .footer .row {
+        gap: 8px;
+      }
+      .footer .navbar-brand a {
+        margin-right: 25px;
+      }
+      .footer strong {
+        color: #de0b47;
+      }
+      .footer .link {
+        color: inherit;
+        text-decoration: none;
+      }
+      .card-footer span {
+        color: darkgray !important;
+      }
+      
+      .polos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 366px;
+      }
+
+      /* incluido */
+      .polos__button {
+        border: solid 1.6px red;
+        border-radius: 5px;
+        color: #28a745;
+        padding: 15px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        transition: all 0.5s ease;
+      }
+
+
+      button.polos__button:hover {
+          background-color: #de0b47;
+          color: white;
+      }
+
+    .page-link{
+        background-color: #de0b47;
+        text-align: center;
+        width: 50%;
+        border-radius: 15px;
+        color: white;
+    }
+    .whats{
+        display: flex;
+        justify-content: center;
+        margin: 15px 0px;
+    }
+    .whats :hover{
+        background-color: #9e0d36;
+        color: white;
+    }
+    .link{
+         color: rgb(99, 99, 8);
+    }
+    body{
+        background-color: #201e1e;
+    }
+
+    .searchbar{ 
+    margin: 20px 0;
+  	display: flex;
+  	justify-content:end;
+    width: 95%;
+  }
+
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 5px 6px;
+    transition: all 0.5s;
+    color: white;
+  }
+
+  .search:hover{
+    border-bottom: 1px solid #9e0d36;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+  }
+  
+  #pesquisar{
+    border: none;
+    margin-right: 5px;
+    background: none;
+    outline: none;
+    color: white;
+  }
+
+  .fa-magnifying-glass{
+    color: white;
+  }
+
+  .border{
+    width: 43%;
+    padding: 25px 35px 12px;
+  }
+
+  .row{
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-dark i{
+    margin-right: 5px;
+  }
+
+  .container-card{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d-flex strong{
+    color: #9b8a8a;
+  }
+
+  .d-flex a{
+    color: #000000;
+  }
+
+  .d-flex{
+    padding: 10px 10px;
+  }
+
+ .container-card small{
+  font-size: 14px;
+ }
+
+ .midias-sociais{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+ }
+
+ @media (max-width: 770px) {
+  .border{
+    min-width: 70%;
+  }
+  .midias-sociais{
+    flex-direction: column;
+  }
+  .page-link{
+    width: 90%;
+  }
+ }
+
+</style>
+
+</head>
+<body>
+
+    <script type="text/javascript">
+
+function pesquisar(){
+  let divs = $('div.border');
+  let pesquisa = $('#pesquisar').val();
+  console.log
+  divs.each(function(index){
+    if($(this).find("h3").text().toUpperCase().trim().includes(pesquisa.toUpperCase().trim())){
+      $(this).css('display','block')
+    }else{
+      $(this).css('display','none')
+    }
+  });
+  if(pesquisa == ''){
+    divs.css('display', 'block');
+  }
+}
+
+    </script>
+    
+
+
+<div class="container ">
+
+    <div class="searchbar">
+        <div class="search">
+            <input type="search" id="pesquisar" onkeyup="pesquisar()" placeholder="Pesquisar">
+            <i class='bx bx-search'></i>
+        </div>
+    </div>
+
+<div class="row alling-items-start">
+
+
+<div class="border border-danger m-2 rounded bg-white ">
+<h3>Ourinhos</h3>
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Arlindo Luz, n. 614,<br />
+bairro Centro, na cidade de Ourinhos/SP<br />
+CEP 19.900-011</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.ourinhos@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a class="link" href="https://www.facebook.com/UnescOurinhos/">@UnescOurinhos</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/unesc_ourinhos/">@unesc_ourinhos</a></span> &nbsp;<br />
+<br />
+<span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=5514981210988"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white ">
+  <h3>Ourinhos</h3>
+  <div class="row2">
+    <div class="address">
+      <div class="d-flex">
+          <div class="container-card">
+            <div class="title">
+              <i class='bx bx-id-card'></i>
+                <strong>Endereço</strong>
+            </div>
+              <small>Rua Arlindo Luz, n. 614,
+                Centro, Ourinhos/SP
+                CEP 19.900-011</small>
+          </div>
+      </div>
+      <div class="d-flex">
+          <div class="container-card">
+            <div class="title">
+              <i class='bx bx-envelope' ></i>
+                <strong>E-mail</strong>
+            </div>
+              <small>uv.ourinhos@unesc.net</small>
+          </div>
+      </div>
+    </div>
+  
+    <div class="midias-sociais">
+      <div class="d-flex">
+          <div class="container-card">
+            <div class="title">
+              <i class='bx bxl-facebook-circle'></i>
+              <strong>Facebook</strong>
+            </div>
+            <small><a href="https://www.facebook.com/UnescOurinhos/">@UnescOurinhos</a></small>
+          </div>
+      </div>
+      <div class="d-flex">
+          <div class="container-card">
+            <div class="title">
+              <i class='bx bxl-instagram'></i>
+              <strong>Instagram</strong>
+            </div>
+              <small><a href="https://www.instagram.com/unesc_ourinhos/">@unesc_ourinhos</a></small>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="whats">
+    <a class="page-link " href="https://api.whatsapp.com/send?phone=5514981210988"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" style="fill: rgb(255, 255, 255);transform: ;msFilter:;"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg> Fale com o polo</a>
+  </div>
+  </div>
+
+
+
+
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Niter&oacute;i</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua S&atilde;o Pedro, n. 104,<br />
+bairro Centro, na cidade de Niter&oacute;i/RJ<br />
+CEP 24.020-210 </span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.niteroi@unesc.ne</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/UnescNiteroi/">@UnescNiteroi</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/unesc_niteroi/">@unesc_niteroi</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=21965698427"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Petr&oacute;polis</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Paulo Barbosa - No 102,<br />
+bairro Centro, na cidade de Petr&oacute;polis/RJ<br />
+CEP 25620-100</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.petropolis@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/UnescPetropolis/">@UnescPetropolis</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/Unesc_Petropolis/">@Unesc_Petropolis</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=21971830442"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Rio de Janeiro</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Av. Braz de Pina, n. 2716,<br />
+apto 101 e 201, bairro Vista Alegre, na cidade de<br />
+Rio de Janeiro/RJ CEP 21235-605</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.riodejaneiro@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescRioDeJaneiro/">@UnescRioDeJaneiro</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Rio/">@Unesc_Rio</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=21984840776"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Florian&oacute;polis - Centro</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Felipe Schmidt, n. 399,<br />
+andar 01, bairro Centro, na cidade de Florian&oacute;polis/SC<br />
+CEP 88.010-001</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.florianopoliscentro@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescFlorianopolis/">@UnescFlorianopolis</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Florianopolis/">@Unesc_Florianopolis</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48996560003"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Florian&oacute;polis - Norte</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rodovia Armando Calil Bulos, n. 5795,<br />
+bairro Ingleses, na cidade de Florian&oacute;polis/SC<br />
+CEP 88.058-001</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.florianopolisingleses@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescIngleses/">@UnescIngleses</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc.Ingleses/">@Unesc.Ingleses</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48996560003"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Pinhais</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Avenida Ira&iacute;, n. 1076,<br />
+bairro Weiss&oacute;polis, na cidade de Pinhais/PR<br />
+CEP 83321-000,</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.pinhais@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescPinhais/">@UnescPinhais</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Pinhais/">@Unesc_Pinhais</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=41998442900"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Caxias do Sul</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Sinimbu, n. 2019,<br />
+sala 1A, bairro Centro, na cidade de Caxias do Sul/RS<br />
+CEP 95020-001</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.caxiasdosul@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescCaxiasdoSul/">@UnescCaxiasdoSul</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_CaxiasdoSul/">@Unesc_CaxiasdoSul</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54996436450"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Garibaldi</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Jacob Ely, n. 498,<br />
+sala 06, bairro Centro, na cidade de Garibaldi/RS<br />
+CEP 95.720-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.garibaldi@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescGaribaldi/">@UnescGaribaldi</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Garibaldi/">@Unesc_Garibaldi</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54996436450"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Feliz</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Pinheiro Machado, n. 331,<br />
+loja 01, bairro Centro, na cidade de Feliz/RS<br />
+CEP 95.770-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.feliz@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescFeliz/">@UnescFeliz</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Feliz/">@Unesc_Feliz</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=51997605455"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Os&oacute;rio</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Julio De Castilhos, n. 1009,<br />
+salas 101 e 102, bairro Centro, na cidade de Os&oacute;rio/RS<br />
+CEP 95.520-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.osorio@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescOsorio/">@UnescOsorio</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Osorio/">@Unesc_Osorio</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=51984230237"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Sapiranga</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Afonso Pena, n. 140,<br />
+bairro Centro, na cidade de Sapiranga/RS<br />
+CEP 93.800-246</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.sapiranga@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescSapiranga/">@UnescSapiranga</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Sapiranga/">@Unesc_Sapiranga</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=51995328438"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Foz do Igua&ccedil;u</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Santos Dumont, n. 1069,<br />
+andar 01, bairro Centro, na cidade de Foz Do Igua&ccedil;u/PR<br />
+CEP 85.851-040</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.fozdoiguacu@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescFoz/">@UnescFoz</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Foz/">@Unesc_Foz</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=45991349288"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Guapor&eacute;</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Luiz Augusto Puperi, n. 360,<br />
+salas 102/104/105, bairro Imaculada Concei&ccedil;&atilde;o<br />
+na cidade de Guapor&eacute;/RS CEP 99.200-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.guapore@unesc.net</span><br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescGuapore/">@UnescGuapore</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Guapore/">@Unesc_Guapore</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54999494464"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Marau</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Rui Barbosa, n. 211,<br />
+sala 102, bairro Centro, na cidade de Marau/RS<br />
+CEP 99150-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.marau@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescMarau/">@UnescMarau</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Marau/">@Unesc_Marau</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54999342281"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Santos Noroeste</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Vereador Alvaro Guimaraes,<br />
+n. 114, bairro Radio Clube, na cidade de Santos/SP<br />
+CEP 11088-180</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.santosnoroeste@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescSantos/">@UnescSantos</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Santos/">@Unesc_Santos</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=13974136707"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Limeira</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Sete de Setembro, n. 550,<br />
+bairro Centro, na cidade de Limeira/SP<br />
+CEP 13.480-151</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> unesc.limeira@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescLimeira/">@UnescLimeira</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc.Limeira/">@Unesc.Limeira</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=1934499850"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Farroupilha</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Rui Barbosa, n. 53A,<br />
+bairro Centro, na cidade de Farroupilha/RS<br />
+CEP 95.170-010</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.farroupilha@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescFarroupilha/">@UnescFarroupilha</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Farroupilha/">@Unesc_Farroupilha</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54981131667"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Passo Fundo</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Benjamin Constant, n. 558, bairro Centro, na cidade de Passo Fundo/RS<br />
+CEP 99.010-130</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.passofundo@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescPassoFundo/">@UnescPassoFundo</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_PassoFundo/">@Unesc_PassoFundo</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54991425044"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Tramanda&iacute;</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Av. Fernandes Bastos, n. 419 - Segundo andar, bairro Centro,<br />
+na cidade de Tramanda&iacute;/RS CEP 95.590-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.tramandai@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescTramandai/">@UnescTramandai</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Tramandai/">@Unesc_Tramandai</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=51984230237"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Palho&ccedil;a</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Augusto Haeming, no 02699,<br />
+LJ 01, bairro Centro, na cidade de Palho&ccedil;a/SC<br />
+CEP 88130-090</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.palhoca@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescPalhoca/">@UnescPalhoca</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Palhoça/">@Unesc_Palho&ccedil;a</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48996560003"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Porto Velho</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Duque De Caxias, n. 2305,<br />
+bairro S&atilde;o Crist&oacute;v&atilde;o, na cidade de Porto Velho/RO<br />
+CEP 78.901-280</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> unesc.portovelho@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescPortoVelh/">@UnescPortoVelh</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc.PortoVelho/">@Unesc.PortoVelho</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=69981220293"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Fazenda Rio Grande</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Francisco Claudino dos Santos,<br />
+n. 222, bairro Pioneiros, na cidade de Fazenda Rio Grande<br />
+CEP 83833-056</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.fazendariogrande@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescFazendaRioGrande/">@UnescFazendaRioGrande</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_FazendaRioGrande/">@Unesc_FazendaRioGrande</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=41995215560"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Cascavel PR02</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua General Os&oacute;rio, n. 3038,<br />
+bairro Centro, na cidade de Cascavel/PR<br />
+CEP 85.802-070</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.cascavelpr02@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescCascavel/">@UnescCascavel</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> @Unesc_Cascavel</span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=45984135198"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Mau&aacute;</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Prefeito Am&eacute;rico Perrella, n. 173,<br />
+bairro Centro, na cidade de Mau&aacute;/SP<br />
+CEP 09390-030</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.maua@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescMaua/">@UnescMaua</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Maua/">@Unesc_Maua</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=1145449279"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Guanambi</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rui Barbosa, n. 272,<br />
+andar n. 02, bairro Centro, na cidade de Guanambi/BA<br />
+CEP 46430-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.guanambi@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescGuanambi/">@UnescGuanambi</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Guanambi/">@Unesc_Guanambi</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=77998533422"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Porto Alegre</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua dos Andradas, n. 1248 -<br />
+Segundo Andar, bairro Centro Hist&oacute;rico, na cidade de<br />
+Porto Alegre/RS CEP 90.020-008</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.portoalegre@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescPoa/">@UnescPoa</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Poa/">@Unesc_Poa</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=5130228202"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Savador - Nazar&eacute;</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua da Mouraria, n. 32,<br />
+bairro Nazar&eacute;, na cidade de Salvador/BA<br />
+CEP 40040-090,</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.savadornazare@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescSalvador/">@UnescSalvador</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Salvador/">@Unesc_Salvador</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=71988159795"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Uberl&acirc;ndia</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Av Afonso Pena , n. 1570,<br />
+anexo 1566, bairro N. Sra. Aparecida, na cidade de Uberl&acirc;ndia<br />
+CEP 38406-970</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.uberlandia@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescUberlandia/">@UnescUberlandia</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Uberlandia/">@Unesc_Uberlandia</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=34996478585"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Ara&ccedil;atuba</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Cussy de Almeida J&uacute;nior, n. 1095,<br />
+bairro Centro, na cidade de Ara&ccedil;atuba/SP<br />
+CEP 16010-400</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.aracatuba@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescAracatuba/">@UnescAracatuba</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Aracatuba/">@Unesc_Aracatuba</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=18981810236"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Lauro Muller</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Centro Comercial Piemonte - R. Orleans,<br />
+n&deg; 342 - Sala 07 - Centro, Lauro M&uuml;ller SC<br />
+88870-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.lauromuller@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescLauroMuller/">@UnescLauroMuller</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_LauroMuller/">@Unesc_LauroMuller</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48998641371"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Nova Veneza</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> R. Dr. Cesare Tibaldesch,<br />
+300 - Centro, Nova Veneza - SC<br />
+88865-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.novaveneza@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescNovaveneza/">@UnescNovaveneza </a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_NovaVeneza/">@Unesc_NovaVeneza</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48996496009"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Sideropolis</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> R. Pres. Dutra, N&deg; 285<br />
+Sala 09 - Centro, Sider&oacute;polis - SC<br />
+88860-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.sideropolis@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescSideropolis/">@UnescSideropolis</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Sideropolis/">@Unesc_Sideropolis</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48998641371"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Rio Pomba</h3>
+
+<address><span class="text-dark">Avenida Rodovalho, N. 96<br />
+bairro Centro, na cidade de Tubar&atilde;o/SC<br />
+CEP 88701-170</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.riopomba@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescRioPomba/">@UnescRioPomba</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_RioPomba/">@Unesc_RioPomba</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=32999224590"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Tubar&atilde;o</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> R. P&eacute;ricles de Queir&oacute;s - Centro<br />
+Rio Pomba - MG<br />
+36180-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.tubarao@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescTubarao/">@UnescTubarao</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Tubarao/">@Unesc_Tubarao</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48999357294"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Imbituba</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Ernani Cotrin, n. 130,<br />
+Sala 05, Centro de Imbituba<br />
+CEP 88780-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.imbituba@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescImbituba/">@UnescImbituba</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Imbituba/">@Unesc_Imbituba</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48999289364"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Carlos Barbosa</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Buaque de Macedo, n. 4013,<br />
+Sobreloja, Centro de Carlos Barbosa<br />
+CEP 95185-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.carlosbarbosa@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescCarlosBarbosa/">@UnescCarlosBarbosa </a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_CarlosBarbosa/">@Unesc_CarlosBarbosa</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54996838672"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Urussanga</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Angelica Colodel Betiol, n. 59<br />
+Sala, Centro - Urussanga<br />
+CEP 88840-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.urussanga@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/Unesc.Urussanga/">@Unesc.Urussanga </a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_Urussanga/">@Unesc_Urussanga</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=48988072325"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Flores da Cunha</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua John Kennedy, n. 2633,<br />
+Centro - Flores do Cunha<br />
+CEP 95270-000</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.floresdacunha@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescFloresdaCunha/">@UnescFloresdaCunha </a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_FloresdaCunha/">@Unesc_FloresdaCunha</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=54999645839"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+<div class="border border-danger m-2 rounded bg-white">
+<h3>Mateus Leme</h3>
+
+<address><span class="text-dark"><i class="fa-solid fa-address-card"></i> Rua Miguel Alves Da Silva, 170, Centro<br />
+Cep: 35671-000, Mateus Leme - MG</span><br />
+<span class="text-dark"><i class="fa-solid fa-at"></i> uv.matheusleme@unesc.net<br />
+<span class="text-dark"><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/UnescMateusLeme/">@UnescMateusLeme</a></span><br />
+<span class="text-dark"><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/Unesc_MateusLeme/">@Unesc_MateusLeme</a></span><br />
+&nbsp; <span class="whats"><a class="page-link " href="https://api.whatsapp.com/send?phone=3135352358"><i class="fa-brands fa-whatsapp"></i> Fale com o polo</a></span> </span></address>
+</div>
+
+</div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div class="row">
+          <div class="col">
+            <a href="/"
+              ><img src="./assets/images/ead/unesc-virtual.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- alterado -->
+      <div class="col-md polos">
+        <a
+          href="./unesc-virtual/graduacao.html"
+          style="text-decoration: none"
+        >
+          <button class="polos__button" style="cursor: pointer">
+            <i class='bx bx-map'></i>
+            <span>Encontre o polo mais próximo de você</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
